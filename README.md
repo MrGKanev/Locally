@@ -2,11 +2,11 @@
 
 # Locally
 
-One Paragraph of project description goes here
+So yes it is another Docker based system. I used something else before but it was too mainstream so i build my own. 
 
 ## Getting Started
+If you feel I am missing interesting things, put it on the [issues](https://github.com/mrgkanev/locally/issues) and I'll definitely try it out.
 
-So yes it is another Docker based system. I used something else before but it was too mainstream so i build my own. 
 
 ### Prerequisites
 
