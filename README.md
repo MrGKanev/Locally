@@ -1,3 +1,4 @@
+<center><img src="https://cdn.rawgit.com/MrGKanev/locally/master/img/server.svg" height="150"></center>
 
 ## Locally
 So yes it is another Docker based system. I used something else before but it was too mainstream so i build my own. 
