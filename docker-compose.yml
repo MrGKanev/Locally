@@ -21,13 +21,3 @@ db:
     MYSQL_DATABASE: database
   ports:
     - "8889:3306"
-phpmyadmin:
-  image: phpmyadmin/phpmyadmin:latest
-  links:
-    - db
-  ports:
-    - 8890:80
-  environment:
-    MYSQL_USER: locally
-    MYSQL_PASSWORD: qwerty
-    MYSQL_DATABASE: database
