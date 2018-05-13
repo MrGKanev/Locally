@@ -44,7 +44,7 @@ For now it is easy.
 ## Built With
 
 * [Docker](https://www.docker.com/) - Docker is the world’s leading software containerization platform.
-* [Apache](https://httpd.apache.org/) - The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+* [Nginx](https://www.nginx.com/) - NGINX accelerates content and application delivery, improves security, facilitates availability and scalability for the busiest web sites on the Internet.
 * [MariaDB](https://mariadb.org/) -One of the most popular database servers. Made by the original developers of MySQL. Guaranteed to stay open source.
 
 ## License
