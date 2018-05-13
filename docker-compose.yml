@@ -1,13 +1,22 @@
-web:
-   image: php:7.2-apache
-   environment:
-     - ALLOW_OVERRIDE=true
-   ports:
-     - "80:80"
-   links:
-     - db
-   volumes:
-     - ./app:/var/www/html/
+nginx:
+    image: tutum/nginx
+    ports:
+        - "80:80"
+    links:
+        - phpfpm
+        - db
+    volumes:
+        - ./nginx/default:/etc/nginx/sites-available/default
+        - ./nginx/default:/etc/nginx/sites-enabled/default
+
+        - ./logs/nginx-error.log:/var/log/nginx/error.log
+        - ./logs/nginx-access.log:/var/log/nginx/access.log
+phpfpm:
+    image: php:fpm
+    ports:
+        - "9000:9000"
+    volumes:
+        -  ./app:/var/www/html/
 
 db:
   image: mariadb
