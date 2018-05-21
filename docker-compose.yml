@@ -44,7 +44,6 @@ services:
       image: redis:alpine
       container_name: locally-redis
 
-
     mariadb:
       image: mariadb:10.1
       container_name: locally-mariadb

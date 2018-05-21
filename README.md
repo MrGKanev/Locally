@@ -1,7 +1,7 @@
 <p align="center"> <img src="https://cdn.rawgit.com/MrGKanev/locally/master/img/server.svg" height="125"></p>
 
 # Locally
-
+## :construction: This repo is in early stage! :construction:
 So yes it is another Docker based system. I used something else before but it was too mainstream so i build my own. 
 
 ## Getting Started
