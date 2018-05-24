@@ -2,6 +2,7 @@ version: "2.0"
 services:
     nginx:
         image: tutum/nginx
+        restart: always
         ports:
             - "80:80"
         links:
@@ -37,16 +38,21 @@ services:
     mailhog:
       image: mailhog/mailhog:latest
       container_name: locally-mailhog
+      restart: always
       ports:
         - "1801:8025"
 
     redis:
       image: redis:alpine
       container_name: locally-redis
+       restart: always
+    ports:
+     - "6379:6379"
 
     mariadb:
       image: mariadb:10.1
       container_name: locally-mariadb
+      restart: always
       working_dir: /application
       volumes:
         - .:/application
