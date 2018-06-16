@@ -57,7 +57,7 @@ services:
       volumes:
         - .:/application
       environment:
-        - MYSQL_ROOT_PASSWORD=ro
+        - MYSQL_ROOT_PASSWORD=qwerty
         - MYSQL_DATABASE=database
         - MYSQL_USER=locally
         - MYSQL_PASSWORD=root
