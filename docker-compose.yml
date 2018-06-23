@@ -1,10 +1,14 @@
-version: "2.1"
+version: "2.2"
 services:
+
     nginx:
-        image: tutum/nginx
+        image: nginx
         restart: always
         ports:
-            - "80:80"
+            - 8080:80
+        environment:
+            - NGINX_HOST= localhost
+            - NGINX_PORT= 80
         links:
             - phpfpm
             - db
@@ -18,7 +22,7 @@ services:
     phpfpm:
         image: php:fpm
         ports:
-            - "9000:9000"
+            - 9000:9000
         volumes:
             -  ./app:/var/www/html/
 
@@ -33,33 +37,18 @@ services:
         MYSQL_PASSWORD: qwerty
         MYSQL_DATABASE: database
       ports:
-        - "8889:3306"
+        - 8889:3306
 
     mailhog:
       image: mailhog/mailhog:latest
       container_name: locally-mailhog
       restart: always
       ports:
-        - "1801:8025"
+        - 1801:8025
 
     redis:
       image: redis:alpine
       container_name: locally-redis
-       restart: always
-    ports:
-     - "6379:6379"
-
-    mariadb:
-      image: mariadb:10.1
-      container_name: locally-mariadb
       restart: always
-      working_dir: /application
-      volumes:
-        - .:/application
-      environment:
-        - MYSQL_ROOT_PASSWORD=qwerty
-        - MYSQL_DATABASE=database
-        - MYSQL_USER=locally
-        - MYSQL_PASSWORD=root
       ports:
-        - "1803:3306"
+        - 6379:6379

@@ -1,5 +1,5 @@
 ﻿server {
-    listen  80;
+    listen  8080;
 
     # this path MUST be exactly as docker-compose.fpm.volumes,
     # even if it doesn't exists in this dock.
