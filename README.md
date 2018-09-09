@@ -1,7 +1,7 @@
 <p align="center"> <img src="https://cdn.rawgit.com/MrGKanev/locally/master/img/server.svg" height="125"></p>
 
 # Locally
-## :construction: This repo is in early stage! :construction:
+## :construction: This repository is in early stage! :construction:
 So yes it is another Docker based system. I used something else before but it was too mainstream so i build my own. 
 
 ## Getting Started
@@ -58,7 +58,7 @@ SMTP (Mailhog)|mailhog|1025 (default)
 
 Simply, unzip the file into your project, this will create `docker-compose.yml` on the root of your project.
 
-# Docker compose cheatsheet #
+# Docker compose cheat sheet #
 
 **Note:** you need to cd first to where your docker-compose.yml file lives.
 
