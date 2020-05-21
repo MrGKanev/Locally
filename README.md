@@ -41,7 +41,8 @@ Service|Address outside containers
 ------|---------
 Webserver|[localhost:1800](http://localhost:1800)
 Mailhog web interface|[localhost:1801](http://localhost:1801)
-MariaDB|**host:** `localhost`; **port:** `1803`
+MariaDB| [localhost:1803](http://localhost:1803)
+Redis Commander| [localhost:1803](http://localhost:8081)
 
 ## Hosts within your environment ##
 
