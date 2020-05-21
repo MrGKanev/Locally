@@ -37,8 +37,8 @@ End with an example of getting some data out of the system or using it for a lit
 
 You can access your application via **`localhost`**, if you're running the containers directly, or through **``** when run on a vm. nginx and mailhog both respond to any hostname, in case you want to add your own hostname on your `/etc/hosts` 
 
-Service|Address outside containers
-------|---------|-----------
+Service|Address outside containers 
+------|---------
 Webserver|[localhost:1800](http://localhost:1800)
 Mailhog web interface|[localhost:1801](http://localhost:1801)
 MariaDB|**host:** `localhost`; **port:** `1803`
