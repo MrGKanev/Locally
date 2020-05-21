@@ -53,6 +53,7 @@ php-fpm|php-fpm|9000
 MariaDB|mariadb|3306 (default)
 Redis|redis|6379 (default)
 SMTP (Mailhog)|mailhog|1025 (default)
+Redis Commander|redis|8081 (default)
 
 ## Deployment
 
