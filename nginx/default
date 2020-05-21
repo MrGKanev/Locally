@@ -1,22 +1,28 @@
 ﻿server {
-    listen  8080;
+    listen 8080 default;
+    index index.html index.php;
+    server_name localhost.local;
+    error_log  /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+    root /src/public;
 
-    # this path MUST be exactly as docker-compose.fpm.volumes,
-    # even if it doesn't exists in this dock.
-    root /usr/share/nginx/html;
-    index index.php index.html index.html;
-    
-    server_name 192.168.1.1;
-
-    location / {
-        try_files $uri /index.php$is_args$args;
-    }
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Methods "POST, GET, PUT, PATCH, DELETE, OPTIONS";
+    add_header Access-Control-Allow-Headers "Origin, Authorization, Accept,Content-Type, api_key, X-Requested-With";
+    add_header Access-Control-Allow-Credentials true;
 
     location ~ \.php$ {
+        try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass phpfpm:9000; 
+        fastcgi_pass php-fpm:9000;
         fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
     }
+	
+	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+		gzip_static on;
+	}
 }
