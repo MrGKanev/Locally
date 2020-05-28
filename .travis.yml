@@ -1,0 +1,11 @@
+sudo: required
+
+env:
+  - locally-mailhog
+  - locally-redis
+  - locally-redis-commander
+  - nginx
+
+
+services:
+  - docker
